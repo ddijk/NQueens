@@ -10,9 +10,7 @@ public class NQueens {
 
     public static void main(String[] args) {
         NQueens nqueens = new NQueens();
-        List<List<Integer>> solutions = nqueens.solve(8).collect(Collectors.toList());
-        //     System.out.println("Aantal solutions " + solutions.size());
-        solutions.stream().forEach(System.out::println);
+        nqueens.solve(4).forEach(System.out::println);
     }
 
     public Stream<List<Integer>> solve(int n) {
